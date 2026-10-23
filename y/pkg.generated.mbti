@@ -1,0 +1,22 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "repro/internal_library/y"
+
+import {
+  "repro/internal_library/internal/x",
+}
+
+// Values
+pub fn fail_resolution() -> Unit raise @x.ResolveError
+
+pub fn make() -> @x.TypeA
+
+// Errors
+
+// Types and methods
+
+// Type aliases
+pub using @x {type ResolveError}
+
+pub using @x {type TypeA}
+
+// Traits
