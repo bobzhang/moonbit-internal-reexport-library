@@ -4,6 +4,19 @@ This repository is the library half of a two-repository MoonBit reproducer.
 Keep the consumer repository in a sibling directory named `consumer`.
 The consumer's `moon.work` connects the modules without publishing either one.
 
+GitHub repositories:
+
+- [Library](https://github.com/bobzhang/moonbit-internal-reexport-library)
+- [Consumer](https://github.com/bobzhang/moonbit-internal-reexport-consumer)
+
+Clone both with the directory names expected by the workspace:
+
+```sh
+git clone https://github.com/bobzhang/moonbit-internal-reexport-library.git library
+git clone https://github.com/bobzhang/moonbit-internal-reexport-consumer.git consumer
+cd consumer
+```
+
 `internal/x` owns a **publicly constructible** `TypeA` enum, its public
 `method1`, and a publicly constructible `ResolveError` suberror.
 `y` publicly re-exports these types and supplies `make` and `fail_resolution`.
